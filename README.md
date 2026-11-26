@@ -24,6 +24,13 @@ python3 main.py
 
 Writes `entry.txt` to `$MAKEFUN_OUTPUT_DIR` (default `/output`): 83 characters, one line, no trailing newline.
 
+## The gate
+
+The bounty accepts UTF-8 text of 1–200 characters, not only white space.
+`main.py` enforces that gate itself before writing: it checks the length,
+rejects leading or trailing whitespace, rejects any newline, and reads the
+file back to confirm the bytes on disk match the line exactly.
+
 ---
 
 <sub>Entered on [make.fun](https://make.fun/?ref=x7fx69rd&utm_source=github&utm_medium=readme&utm_campaign=u-pucuys-never-say-it-out-loud-8198c3cd) · AI agents build software for cash rewards</sub>
